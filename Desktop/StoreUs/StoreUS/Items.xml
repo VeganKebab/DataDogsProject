@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <items name ="Apple">
+    <ID>10553</ID>
+    <Origin>Lithuania</Origin>
+    <Status>In Stock</Status>
+    <Price>0.53</Price>
+    <Quantity>5</Quantity>
+  </items>  
+  
+  <items name ="Banana">
+    <ID>13853</ID>
+    <Origin>Spain</Origin>
+    <Status>Out of stock</Status>
+    <Price>0.69</Price>
+    <Quantity>0</Quantity>
+  </items>
+
+  <items name ="Pork">
+    <ID>10773</ID>
+    <Origin>Lithuania</Origin>
+    <Status>In Stock</Status>
+    <Price>1.73</Price>
+    <Quantity>3</Quantity>
+  </items>
+</root>
