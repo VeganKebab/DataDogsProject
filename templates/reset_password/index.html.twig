@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reset password{% endblock %}
+
+{% block dashboard %}
+    <form action="{{ path('reset_password') }}">
+        Send reset code to:
+        <input type="text" name="_username2" placeholder="Username here..">
+        <button type="submit">Send</button>
+        <br>
+
+    </form>
+    <form action="{{ path('resetpasschange') }}">
+        Create new password using reset code:
+        <input type="text" name="_username" placeholder="Username">
+        <br>
+        <input type="text" name="_token" placeholder="Reset code:">
+        <br>
+        <input type="password" name="new_password" placeholder="New password">
+        <br>
+        <input type="password" name="new_password_confirm" placeholder="Repeat new password">
+        <br>
+        <button type="submit">Change</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Delete user{% endblock %}
+
+{% block dashboard %}
+    <form action="{{ path('delete_user') }}" method="post">
+        Select user:
+        <input type="text", name="iddelete", placeholder="User ID">
+        <button type="submit">Delete</button>
+    </form>
+
+{% endblock %}

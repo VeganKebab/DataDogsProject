@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HomePage!{% endblock %}
+{% block dashboard %}
+    <style>body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .card a {
+            font-size: 12px;
+            font-family: Arial;
+
+        }
+        </style>
+
+{% for event in events %}
+    <div class="card">
+        <h2>{{ event.title }}</h2>
+        <h5>{{ event.description }}</h5>
+        <p>{{ event.location }}</p>
+        <a href="{{ path('view_event', {id: event.id}) }}">More information</a>
+    </div>
+
+    {% endfor %}
+{% endblock %}
+
+

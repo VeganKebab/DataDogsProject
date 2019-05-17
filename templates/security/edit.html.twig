@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Change password{% endblock %}
+
+{% block dashboard %}
+    <form action="{{ path('user_edit', {username: app.token.username}) }}" method="post">
+        Old password:
+        <input type="password" name="old_password" placeholder="Old password">
+        New password:
+        <input type="password" name="new_password" placeholder="New password">
+        <input type="password" name="new_password_confirm" placeholder="Repeat new password">
+
+        <button type="submit">Change</button>
+    </form>
+
+{% endblock %}

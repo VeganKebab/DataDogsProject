@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit event{% endblock %}
+
+{% block dashboard %}
+    <h1>Edit event</h1>
+
+    {{ form_start(eventForm) }}
+    {{ form_row(eventForm.Title) }}
+    {{ form_row(eventForm.Description) }}
+    {{ form_row(eventForm.Category) }}
+    {{ form_row(eventForm.Date) }}
+    {{ form_row(eventForm.Location) }}
+    {{ form_row(eventForm.Price) }}
+    <button class="submit">Edit</button>
+    {{ form_end(eventForm) }}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}View Event{% endblock %}
+
+{% block dashboard %}
+
+    <h1>{{ events.title }}</h1>
+    <p>Category: {{ events.category }}</p>
+    <p style="word-wrap: break-spaces">{{ events.description }}</p>
+    <p>Location: {{ events.location }}</p>
+    <p>Date: {{ events.date.format("Y-m-d") }}</p>
+    <p>Price: {{ events.price }} Euros</p>
+    {% if (app.token.username=='admin') %}
+    <a href="{{ path('delete_event', {id: events.id}) }}">Delete</a>
+        <a href="{{ path('event_edit', {id: events.id}) }}">Edit</a>
+    {% endif %}
+{% endblock %}

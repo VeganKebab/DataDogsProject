@@ -1,0 +1,8 @@
+<h3>Project password recovery!</h3>
+
+Hi {{ user.username }}! If you forgot your password use the code below.
+This code is active for 24 hours.
+{# example, assuming you have a route named "login" #}
+To change password copy this: "{{ user.resetToken }}" to token place in reset password page.
+
+Thanks!

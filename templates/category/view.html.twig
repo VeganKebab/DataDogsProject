@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block dashboard %}
+    Categories:
+    {% if app.token.username=='admin' %}
+    {% for category in categories %}
+    <p>{{ category.Name }} <a href="{{ path('category_delete', {name: category.name}) }}">[x]</a></p>
+    {% endfor %}
+    <a href="{{ path('category_create') }}">Create category</a>
+    {% else %}
+    {% for category in categories %}
+        <p>{{ category.Name }}
+            <a href="{{ path('subscribtion', {category_id: category.id}) }}">Subscribe</a>
+        </p>
+    {% endfor %}
+    {% endif %}
+{% endblock %}
